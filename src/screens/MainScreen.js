@@ -1,27 +1,52 @@
 import React from 'react';
 import {StatusBar, StyleSheet, Text, View ,Image} from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import SaveScreen from '../navigation/screen/SaveScreen';
+import CreateScreen from '../navigation/screen/CreateScreen';
+import SearchScreen from '../navigation/screen/SearchScreen';
+
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+const Tab = createBottomTabNavigator();
 
 const MainScreen = () => {
 
   return (
 <>
-<StatusBar backgroundColor= "#141414" barStyle= "light-content"/>
-<View style={styles.container}>
+<Tab.Navigator
 
-<View style = {styles.top}>
-<Text style={styles.title}>MainScreen</Text>
-</View>
-
-<View style = {styles.bottom}>
-<Text style={styles.title}>MainScreen</Text>
-</View>
- 
-</View>
-
-<View>
-
-
-</View>
+  screenOptions={{
+    headerShown: false,
+    tabBarShowLabel: false,
+    tabBarStyle: {backgroundColor: '#181818' , borderTopWidth: 0,
+    elevation: 0},
+    tabBarInactiveTintColor: '#fff',
+    tabBarActiveTintColor: '#30BE91',
+  }}
+>
+      <Tab.Screen name="CreateScreen" component={CreateScreen} options={{
+        tabBarIcon: ({color, size}) => (
+          <Ionicons name="home-outline" color={color} size={size} />
+        )
+      }}
+       />
+      <Tab.Screen name="SaveScreen" component={SaveScreen} options={{
+        tabBarIcon: ({color, size}) => (
+          <AntDesign name="staro" color={color} size={size} />
+        )
+      }}
+      
+      
+      />
+      <Tab.Screen name="SearchScreen" component={SearchScreen}  options={{
+        tabBarIcon: ({color, size}) => (
+          <AntDesign name="search1" color={color} size={size} />
+        )
+      }}
+      
+       />
+    </Tab.Navigator>
 </>
     
   );
