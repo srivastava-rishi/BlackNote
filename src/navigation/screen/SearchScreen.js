@@ -5,7 +5,7 @@ const SearchScreen = () => {
 
   return (
 <>
-<StatusBar backgroundColor= "#141414" barStyle= "light-content"/>
+<StatusBar backgroundColor= "#1C1C1C" barStyle= "light-content"/>
 <View style={styles.container}>
 
 <Text style={styles.title}>SearchScreen</Text>
@@ -19,7 +19,7 @@ const SearchScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#141414',
+      backgroundColor: '#1C1C1C',
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center'

@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBar, StyleSheet, Text, View ,Image} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SaveScreen from '../navigation/screen/SaveScreen';
-import CreateScreen from '../navigation/screen/CreateScreen';
+import CreateScreen from '../navigation/screen/create/CreateScreen';
 import SearchScreen from '../navigation/screen/SearchScreen';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -36,7 +36,6 @@ const MainScreen = () => {
           <AntDesign name="staro" color={color} size={size} />
         )
       }}
-      
       
       />
       <Tab.Screen name="SearchScreen" component={SearchScreen}  options={{

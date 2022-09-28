@@ -9,6 +9,7 @@
 import React from 'react';
 import SplashScreen from './src/screens/SplashScreen';
 import MainScreen from './src/screens/MainScreen';
+import TaskScreen from './src/navigation/screen/create/TaskScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -35,7 +36,15 @@ const App = () => {
     options={{
       headerShown: false
   }}
-    />
+  />
+
+  <Stack.Screen name="CreateTask" 
+    component={TaskScreen}
+    options={{
+      headerShown: false
+  }}
+
+  />
     
     
     </Stack.Navigator>
